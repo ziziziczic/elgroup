@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/12530f3a2e.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/topMenu.css">
+</head>
+
+<body>
+    <!-- 상단 메뉴 ------------------------------------------------------------------------->
+    <header>
+        <div class="top_menu_container">
+            <ul>
+                <li id="logo"><a href="./index.html"><img src="./img/el_group.png" alt=""></a></li>
+                <li>
+                    <ul class="menu_container">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">사업영역</a>
+                            <ul>
+                                <li><a href="">기업교육</a></li>
+                                <li><a href="">보험&middot;금융</a></li>
+                                <li><a href="">세무&middot;회계</a></li>
+                                <li><a href="">법무&middot;노무</a></li>
+                                <li><a href="">문화&middot;콘텐츠</a></li>
+                                <li><a href="">LMS사업</a></li>
+                                <li><a href="">도시개발&middot;재건축</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./map.html">오시는 길</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- 상단 배경 ------------------------------------------------------------------------->
+        <div class="topBg">
+            <img src="./img/common/buildings1.jpg" alt="">
+        </div>
+    </header>
+
+    <section class="subTitle2">
+        <h2>고객센터</h2>
+        <ul class="listType1">
+            <li>
+                <input type="radio" id="item1" name="items" checked>
+                <label for="item1">교육문의</label>
+                <div class="tapContents">
+                    <h3> <i class="fas fa-mobile-alt"></i> 교육문의</h3>
+                    <ul>
+                        <li>02 - 6433 - 5803 (백혜주)</li>
+                        <li>02 - 6433 - 5805 (정신예)</li>
+                    </ul>
+                    <h3> <i class="fas fa-mobile-alt"></i> 근로자 카드 문의</h3>
+                    <ul>
+                        <li>02 - 6433 - 5806 (박성춘)</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="item2" name="items">
+                <label for="item2">견적문의</label>
+                <div class="tapContents">
+                    <h3><i class="fas fa-mobile-alt"></i> 견적문의</h3>
+                    <form name="EstimateForm" method="POST" action="https://www.eledu.co.kr/eduask/estimate_ok.php"
+                        target="ScriptFrame">
+                        <input type="text" name="Upjong" id="Upjong" placeholder="업종" required>
+                        <input type="text" name="CompanyName" id="CompanyName" placeholder="회사명" required>
+                        <input type="text" name="Name" id="Name" placeholder="담당자명" required>
+                        <input type="text" name="Phone" id="Phone" placeholder="-없이 연락처를 입력하세요." required>
+                        <select name="Category" id="Category">
+                            <option value="">선택하세요</option>
+                            <option value="A">법정의무교육</option>
+                            <option value="B">산업안전보건교육</option>
+                            <option value="C">법정의무교육+산업안전보건교육</option>
+                            <option value="F">환급교육</option>
+                            <option value="D">비환급교육</option>
+                            <option value="E">기타 직무역량강화교육</option>
+                        </select>
+                        <div class="container">
+                            <input type="checkbox" name="Agree" id="Agree"><label for="Agree">개인정보 수집에 동의합니다. </label><a
+                                href="http://www.eledu.co.kr/member/policy02.php" target="_blank"
+                                title="새창으로 열기"><button>전문보기</button></a>
+                        </div>
+                        <input type="submit" value="문의하기">
+                    </form>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="item4" name="items">
+                <label for="item4">자주하는 질문</label>
+                <div class="tapContents">
+                    <h3>자주하는 질문</h3>
+                    <ul>
+                        <li>준비중</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <iframe src="./footer.html" frameborder="0" width="100%" height="450" scrolling="no"marginwidth="0" marginheight="0"></iframe>
+
+</body>
+
+</html>

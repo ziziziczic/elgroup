@@ -1,0 +1,217 @@
+/* 공통사항 */
+.hide {display:none;}
+
+.bg_gray {background-color: #f3f3f3;}
+.bg_blue {background-color: rgb(13,38,76);}
+
+    /* img filter */
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(7);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px green);}
+
+.padding-top-2rem {padding-top:2rem;}
+.padding-bottom-2rem {padding-bottom: 2rem;}
+.padding-bottom-1rem {padding-bottom: 1rem;}
+
+.wide_container{width: 100vw;}
+.container {margin:0 auto; width:1200px;}
+
+body {font-size: 18px; font-family: 'Nanum Gothic', sans-serif;}
+
+/* 고정메뉴바 */
+.fixed_menu {position: fixed; right:8vw; top:20vh; width:100px; height: 500px; z-index: 2; border-radius: 20px; background-color: #0d264c;}
+.fixed_menu ul {width:100%; height:100%; display:flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+.fixed_menu ul li a {color:white;}
+.fixed_menu ul li a i {font-size: 2rem; border:2px solid white; border-radius: 50%; padding:1rem;}
+
+/* header start */
+    /* 레이어팝업 */
+header {width:100vw;}
+header .container .layer_popup {display:none; position:relative; width: 100%; height: 80px; background-color: coral;}
+header .container .layer_popup .banner_btn_wrap {}
+
+header .container .top {width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center;}
+header .container .top a img{width: 60%;}
+
+header .container .top ul {width:60%; height: 100%; display: flex; justify-content: space-evenly; align-items: center;}
+header .container .top ul img {width:100%;}
+
+    /* 상단메뉴 */
+header .container .menu {position:relative; width: 100%; height: 80px; background-color: rgb(13,38,76);}
+header .container .menu ul {z-index: 9999; display:flex; justify-content: space-evenly; line-height: 80px;}
+header .container .menu ul li {position:relative; text-align: center;}
+header .container .menu ul li a {padding: 5px 20px; color:white;}
+
+header .container .menu ul ul {position:absolute; left: -40%; top: 80px; display:none; flex-direction: column; justify-content: space-evenly; line-height: 40px;}
+header .container .menu ul ul li {font-size: 16px;}
+header .container .menu > ul > li:hover > ul {display: flex; width:170%;}
+
+header .container .menu ul ul ul {position: absolute; left: 80%; top:-3px; display:none; flex-direction: column; justify-content: space-evenly; background-color: rgb(13,38,76);;}
+header .container .menu ul ul > li:hover > ul {display: flex; width:100%;}
+
+header .container .menu ul ul li:hover {border:1px solid white;}
+header .container .menu ul ul li:hover a {color: yellowgreen;}
+
+    /* 메뉴 검은 배경 */
+header .container .menu .bg {z-index:2; position:absolute; left:0; top:80px; width:100%; height: 370px; background-color:rgba(0,0,0,.9);}
+/* header end*/
+
+/* section start */
+section {width:100vw;}
+section .container {}
+
+/*
+section .container .directContainer {width:100%; height: 500px; display:flex;}
+section .container .directContainer .directMenu {width:50%; height: 100%; background-color: #474747; border-radius: 10px;}
+section .container .directContainer .directMenu ul {width:100%; height: 100%; display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr); place-items: center; }
+section .container .directContainer .directMenu ul li {width:100%; height: 100%;}
+section .container .directContainer .directMenu ul li a {display: inline-block; width: 100%; height: 100%; color: #d5a770; font-size: 2rem; text-align: center; line-height: 4rem;}
+section .container .directContainer .directMenu ul li a i { padding:1.5rem; margin-top: 15px; border: 2px solid #d5a770; border-radius: 10px;}
+section .container .directContainer .directMenu ul li a span {font-size: 1.5rem;}
+section .container .directContainer .directMenu ul li a:hover {color : white;}
+section .container .directContainer .directMenu ul li a:hover i {border: 2px solid white;}
+
+section .container .directContainer .directConsult {width:50%; height: 100%; display:flex; flex-direction: column; justify-content: space-evenly; align-items: center; background-color:#f6f6f6;}
+section .container .directContainer .directConsult h1 {font-size: 2rem;}
+section .container .directContainer .directConsult form {width: 70%; height:70%; display: flex; flex-direction: column; justify-content: space-evenly;}
+section .container .directContainer .directConsult form select, input {width: 100%; height: 2rem;}
+section .container .directContainer .directConsult form label {width:100%; height:2rem; line-height: 2rem;}
+section .container .directContainer .directConsult form label input {width:10%; height: 1.5rem;}
+section .container .directContainer .directConsult form #btnConsulting {background-color: #ff0040; color:white; height: 4rem; font-size: 2rem;}
+*/
+
+section .container h1 {font-size: 2rem; font-weight: bolder; text-align: center;}
+section .container p {font-size: 1rem; text-align: center; margin:0.7rem 0 0; line-height: 1.5rem;}
+section .container p span {color:red; font-weight: bolder;}
+
+/* swiper 공통사항 */
+section .swiper-slide {text-align: center; font-size: 18px;  /* Center slide text vertically */ display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;}
+section .swiper-container-horizontal>.swiper-pagination-bullets {bottom: 0px;}
+.swiper-pagination-bullet {width: 15px; height: 15px;}
+.swiper-button-prev:after {background-color: rgba(0,0,0,.3); padding:1rem; color:#fff;}
+.swiper-button-next:after {background-color: rgba(0,0,0,.3); padding:1rem; color:#fff;}
+
+/* 광고 swiper */
+section .first {width: 100vw; height: 500px;}
+section .wide_container .swiper-container-horizontal>.swiper-pagination-bullets {bottom: 2rem;}
+section .first .swiper-button-prev {left:20rem;}
+section .first .swiper-button-next {right:20rem;}
+
+/* 직무교육 swiper */
+    .second {width: 100%; height: 450px; }
+    .second .swiper-slide {background: #f3f3f3;}
+    .second .swiper-slide img {width:100%;}
+
+/* 법정의무교육 swiper */
+    .third{width: 100%; height: 450px;}
+    .third .swiper-slide img {width:100%;}
+
+/* K비대면 바우처 플랫폼  */
+    .fourth{width: 100%; height: 450px;}
+    .fourth .swiper-slide {background: #f3f3f3;}
+    .fourth .swiper-slide img {width:100%;}
+
+
+
+
+
+/* tap menu start*/
+.tap_container {position:relative; width:100%; height:800px;}
+
+    /* title setting */
+.tap_container > ul {display: flex; justify-content: center;}
+.tap_container > ul > li {padding:0 2rem;}
+.tap_container > ul > li label {line-height: 5rem; font-size: 1.8rem;}
+
+.tap_container input {display:none;}
+.tap_container input[type='radio']:checked + label{font-weight: bold; cursor: pointer;}
+.tap_container input[type='radio']:checked ~ .tap_contents {opacity:1; transform: translateX(30%);}
+.tap_container .tap_contents { position:absolute; top:5rem; left:0px; width:1200px; height: 700px; opacity:0; transition: opacity 0.5s, transform 0.8s;}
+
+    /* 이미지 공통설정 */
+.tap_container img { object-fit: cover; width: 100%; height:100%; border-radius:20px;}
+
+    /* tap menu 법정의무교육 */
+.tap_container .obli {display: flex; justify-content: space-around;}
+        /* 왼쪽 */
+.tap_container .obli .left{width:40%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.tap_container .obli .left div{width:90%; height: 80%; border-radius: 20px; background-color: rgba(0,0,0,.2);}
+
+        /* 오른쪽 */
+.tap_container .obli .right {width:60%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;}
+.tap_container .obli .right li {width:300px; height: 300px; border-radius: 20px; background-color: rgba(0,0,0,.2);}
+
+    /* tap menu 산업안전보건교육 */
+.tap_container .industry {display: flex; justify-content: space-evenly; align-items: center;}
+        /* 왼쪽 */
+        /* 오른쪽 */
+.tap_container .industry .left, .right{display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; width:30%; height: 100%;}
+.tap_container .industry .top, .bottom {width:300px; height:300px; background-color: rgba(0,0,0,.2); border-radius: 20px;}
+        /* 가운데 */
+.tap_container .industry .center {width:40%; height:80%; background-color: rgba(0,0,0,.2); border-radius: 20px;}
+
+    /* tap menu 내일배움카드 */
+.tap_container .learning {display: flex; justify-content: space-around;}
+        /* 왼쪽 */
+.tap_container .learning .left {width:60%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;}
+.tap_container .learning .left li {width:300px; height: 300px; border-radius: 20px; background-color: rgba(0,0,0,.2);}
+        /* 오른쪽 */
+.tap_container .learning .right{width:40%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.tap_container .learning .right div{width:90%; height: 80%; border-radius: 20px; background-color: rgba(0,0,0,.2);}
+
+/* tap menu end */
+
+
+/* section end */
+
+footer {width:100vw; height:40vh; background-color: #000000;}
+footer .container {width:1200px; height: 100%; margin:0 auto; display:flex; justify-content: space-between; align-items: center; color:white;}
+footer .container .companyInfo {width:100%; display: flex; justify-content: space-evenly; align-items: center;}
+footer .container .companyInfo ul {display: flex; flex-direction: column; justify-content: space-evenly;}
+footer .container .companyInfo ul li {line-height: 2rem;}
+footer .container .companyInfo ul li a{color:white;}
+
+/* ========================================================================================= */
+
+/* input submit */
+.btn {
+    /* 필수적으로 입력해 주어야 하는 속성 */
+    vertical-align: middle; /* Input 과 타 요소들의 텍스트 높이를 동일하게 세로 정렬한다 */
+    display: inline-block; /* a나 span 태그의 경우 inline-block 요소처리 */
+    line-height: 1;
+    cursor: pointer; /* input type에 따라 커서의 모양이 다르다. */
+    
+    /* 패딩은 Input과 다른 태그들이 달라야 한다 */
+    padding: 8px 12px;
+    /* 디자인 요소들 */
+    transition: all 0.3s;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+    border-radius: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    /* 요소마다 border 의 색상을 다르게 주기 위해서 속성들을 따로 기입한다 */
+    border-style: solid;
+    border-width: 1px;
+}
+input.btn {
+    /* Input은 다른 태그들과 패딩값이 다르게 입력된다. top + 1, bottom -1 을 해준다. */
+    padding: 9px 12px 7px;
+}
+
+
+/* 
+font-family: 'Black Han Sans', sans-serif;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Jua', sans-serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Noto Serif KR', serif;
+font-family: 'Nanum Gothic', sans-serif;
+ */

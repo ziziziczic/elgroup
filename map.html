@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오시는 길</title>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/12530f3a2e.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/topMenu.css">
+    <link rel="stylesheet" href="./css/map.css">
+
+    <!-- javascript -->
+    <!-- <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=6b74adb3cb3c70b9c603879ea414b048"defer></script> -->
+</head>
+
+<body>
+   <!-- 상단 메뉴 ------------------------------------------------------------------------->
+   <header>
+    <div class="top_menu_container">
+        <ul>
+            <li id="logo"><a href="./index.html"><img src="./img/el_group.png" alt=""></a></li>
+            <li>
+                <ul class="menu_container">
+                    <li><a href="#">회사소개</a>
+                        <ul>
+                            <li><a href="./aboutUs.html">인사말</a></li>
+                            <li><a href="./history.html">연혁</a></li>
+                            <li><a href="./organizationChart.html">조직도</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업영역</a>
+                        <ul>
+                            <li><a href="./eledu/eledu.html">기업교육</a></li>
+                            <li><a href="./elfinance/elfinance.html">보험&middot;금융</a></li>
+                            <li><a href="./eltax/eltax.html">세무&middot;회계</a></li>
+                            <li><a href="">법무&middot;노무</a></li>
+                            <li><a href="">문화&middot;콘텐츠</a></li>
+                            <li><a href="">LMS사업</a></li>
+                            <li><a href="">도시개발&middot;재건축</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./map.html">오시는 길</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- 상단 배경 ------------------------------------------------------------------------->
+    <div class="topBg">
+        <img src="./img/compass-5261062_1920.jpg" alt="">
+    </div>
+</header>
+
+<section>
+ <!-- 오시는 길 ----------------------------------------------------------------------------- -->
+ <article class="subTitle1">
+    <h2>오시는 길</h2>
+    <ul class="listType1">
+        <li>
+            <span>주소 도로명</span>
+            서울특별시 영등포구 당산로 38길 12 (우 07220)
+        </li>
+        <li>
+            <span>지번</span>
+            당산동 4가 32-78
+        </li>
+        <li>
+            <span>건물명</span>
+            진아케이드빌 4층
+        </li>
+    </ul>
+</article> 
+
+<!-- 지도-------------------------------------------------------------------------------------------------------------->
+<article class="kakaoMap">
+    <div class="container">
+        <div id="map"></div>
+    </div>
+</article>
+
+<!-- 교통편-------------------------------------------------------------------------------------------------------------->
+<article class="transportation">
+    <h1><span>대중교통 이용</span>을 부탁 드립니다.</h1>
+    <ul class="tapContainer">
+        <li>
+            <input type="radio" id="subway" name="publicTransport" checked>
+            <label for="subway">지하철 이용안내</label>
+            <div class="contents">
+                <h3>지하철</h3>
+                <ul>
+                    <li>
+                        <span>2호선</span>
+                        <ul>
+                            <li>영등포구청역 4번출구 (10분소요)</li>
+                            <li>당산역 10번출구 (15분소요)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>5호선</span>
+                        <ul>
+                            <li>영등포구청역 4번출구 (10분소요)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>9호선</span>
+                        <ul>
+                            <li>당산역 10번출구 (15분소요)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="bus" name="publicTransport">
+            <label for="bus">버스 이용안내</label>
+            <div class="contents">
+                <h3>버스</h3>
+                <ul>
+                    <li>
+                        <span>간선</span>
+                        <ul>
+                            <li>660</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>지선</span>
+                        <ul>
+                            <li>5620, 6631, 6637</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>일반</span>
+                        <ul>
+                            <li>5, 70-3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>마을</span>
+                        <ul>
+                            <li>영등포02, 영등포03, 영등포12</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="car" name="publicTransport">
+            <label for="car">승용차 이용안내</label>
+            <div class="contents">
+                <h3>승용차</h3>
+                <ul>
+                    <li>
+                        <span>당산역 방면에서 오시는 경우 </span>
+                        <ul>
+                            <li>영등포구청역 방향으로 직진</li>
+                            <li>약 600m 이동후</li>
+                            <li>당산로 38길 좌회전후 120m 직진</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>영등포구청역 방면에서 오시는 경우</span>
+                        <ul>
+                            <li>당산역 방향으로 직진 </li>
+                            <li>영등포구청앞 교차로 통과후 200m 직진 </li>
+                            <li>당산로 38길 우회전후 120m 직진 </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</article>
+</section>
+<iframe src="./footer.html" frameborder="0" width="100%" height="450" scrolling="no"marginwidth="0" marginheight="0"></iframe>
+<!-- map script ----------------------------------------------------------------------------------->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6b74adb3cb3c70b9c603879ea414b048"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = {
+            center: new kakao.maps.LatLng(37.52866939869992, 126.89937943283925), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var imageSrc = './img/locationmarker.png', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+        imageOption = {
+            offset: new kakao.maps.Point(27, 69)
+        }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(37.52866939869992, 126.89937943283925); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+</script>
+<!-- map end-------------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

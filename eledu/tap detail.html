@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .tap_container {position:relative; width:100%; height:800px;}
+        
+        .tap_container > ul {display: flex; justify-content: center;}
+        .tap_container > ul > li {padding:0 2rem;}
+        .tap_container > ul > li label {line-height: 3rem;}
+        
+        .tap_container input {display:none;}
+        .tap_container input[type='radio']:checked + label{font-weight: bold;}
+        .tap_container input[type='radio']:checked ~ .tap_contents {opacity:1; transform: translateX(30%);}
+        .tap_container .tap_contents {position:absolute; top:3rem; left:0px; width:1200px; height: 700px; opacity:0; transition: opacity 0.5s, transform 0.8s; border:1px solid gray;}
+
+        /* tap menu 법정의무교육 */
+        .obli {display: flex; justify-content: space-around;}
+        /* 왼쪽 */
+            .obli .left{width:40%; height: 100%; display: flex; justify-content: center; align-items: center;}
+            .obli .left div{width:90%; height: 80%; border-radius: 15px; background-color: rgba(0,0,0,.2);}
+        
+        /* 오른쪽 */
+            .obli .right {width:60%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;}
+            .obli .right li {width:300px; height: 300px; border-radius: 15px; background-color: rgba(0,0,0,.2);}
+
+        /* tap menu 산업안전보건교육 */
+        .industry {display: flex; justify-content: space-evenly; align-items: center;}
+            /* 왼쪽 */
+            /* 오른쪽 */
+            .industry .left, .right{display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; width:30%; height: 100%;}
+            .industry .top, .bottom {width:300px; height:300px; background-color: rgba(0,0,0,.2); border-radius: 15px;}
+            /* 가운데 */
+            .industry .center {width:40%; height:80%; background-color: rgba(0,0,0,.2); border-radius: 15px;}
+
+        /* tap menu 내일배움카드 */
+        .learning {display: flex; justify-content: space-around;}
+            /* 왼쪽 */
+            .learning .left {width:60%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;}
+            .learning .left li {width:300px; height: 300px; border-radius: 15px; background-color: rgba(0,0,0,.2);}
+             /* 오른쪽 */
+            .learning .right{width:40%; height: 100%; display: flex; justify-content: center; align-items: center;}
+            .learning .right div{width:90%; height: 80%; border-radius: 15px; background-color: rgba(0,0,0,.2);}
+        
+    </style>
+</head>
+<body>
+    <div class="tap_container">
+        <ul>
+            <li>
+                <input type="radio" id="radiobox1" name="tap_group" checked>
+                <label for="radiobox1">법정의무교육</label>
+                <div class="tap_contents obli">
+                    <div class="left">
+                        <div>
+                            <a href="#"><img src="#" alt=""></a>
+                        </div>
+                    </div>
+                    <ul class="right">
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="radiobox2" name="tap_group">
+                <label for="radiobox2">산업안전보건교육</label>
+                <div class="tap_contents industry">
+                    <div class="left">
+                        <div class="top"><a href="#"><img src="" alt=""></a></div>
+                        <div class="bottom"></div>
+                    </div>
+                    <div class="center"><a href="#"><img src="" alt=""></a></div>
+                    <div class="right">
+                        <div class="top"><a href="#"><img src="" alt=""></a></div>
+                        <div class="bottom"><a href="#"><img src="" alt=""></a></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" id="radiobox3" name="tap_group">
+                <label for="radiobox3">내일배움카드</label>
+                <div class="tap_contents learning">
+                    <ul class="left">
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                        <li><a href="#"><img src="" alt=""></a></li>
+                    </ul>
+                    <div class="right">
+                        <div>
+                            <a href="#"><img src="#" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

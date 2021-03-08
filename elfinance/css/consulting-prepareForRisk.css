@@ -1,0 +1,40 @@
+@import '../../css/reset.css';
+@import '../../css/common.css';
+
+/* toolbar 
+-----------------------------------------------------------------------------*/
+.gallery .toolbar {grid-column: 2/span 1; display:flex; justify-content: space-between; align-items: center; margin: 2rem 0;}
+.gallery .toolbar .search-wrapper{display: flex; justify-content: space-evenly; align-items: center;}
+.gallery .toolbar .search-wrapper input[type="search"] {height: 30px; margin-right:1rem;}
+
+.gallery .toolbar .view-options {display:flex; justify-content: space-evenly; align-items: center;}
+.gallery .toolbar .view-options li:not(:last-child) {margin-right:1.2rem;}
+.gallery .toolbar .view-options button{padding: 3px; border:3px solid transparent;}
+.gallery .toolbar .view-options .active button{border-color:var(--darkblue);}
+
+/* image-list
+-----------------------------------------------------------------------------*/
+.image-list{grid-column: 2/span 1;}
+.image-list > li {position:relative; background: var(--blue_opacity); color:var(--darkblue);}
+.image-list > li figcaption {width:100%; height: 200px; border:1px solid transparent; border-color: var(--darkblue);}
+.image-list > li figcaption p:first-child{font-weight: bold; background-color: var(--blue); color:var(--white); padding:1rem;}
+.image-list > li figcaption p:nth-child(2){margin-top: .5rem; line-height: 1.5rem; font-weight: bolder; padding: 1rem;}
+
+.image-list > li > .contents {display: none; position:absolute; width: 100%; height: 100%; left:0; top:0; background-color:var(--blue); color:var(--white);}
+.image-list > li > .contents > ul {width: 100%; height: 100%; display: flex; flex-direction: column; padding:1rem;}
+.image-list > li > .contents > ul > li{line-height: 1.5rem; font-weight: bold; font-size: .8rem;}
+.image-list > li > .contents > ul > li+li{margin-top: .7rem;}
+
+/* grid-view
+------------------------------------------------------------------------------*/
+.grid-view {display:grid; grid-gap:2rem; grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue),1fr)); align-items: center;}
+.grid-view figure {display:flex; flex-direction: column; justify-content: center; align-items: center; padding:2rem;}
+
+/* list-view
+-------------------------------------------------------------------------------*/
+.list-view > li+li{margin-top: 3rem;}
+.list-view > li > figure{display:flex; align-items: center;}
+
+/* list-view 의 list 클릭시, contents 보여주기 
+--------------------------------------------------------------------------------*/
+.image-list > li:hover > .contents {display:block;}

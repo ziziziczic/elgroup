@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+/* 공통사항 */
+:root {
+    --black : #000;
+    --gray : #dfdbd8;
+    --white : #fff;
+    --orange : #ff9c00;
+    --blue : #343193;
+    --drakblue : #0f1d42;
+    --lightgreen : #f9fafb;
+    --lightgray : #f6f6f6;
+
+    --green_opacity : rgba(120, 238, 46, .1);
+    --yellow_opacity :rgba(255,205,74,.1);
+    --blue_opacity :  rgba(59,76,168,.1);
+    --minRangeValue : 280px;
+}
+
+.bg_green {background-color: var(--green_opacity);}
+.bg_yellow {background-color: var(--yellow_opacity);}
+.bg_blue {background-color:var(--blue_opacity);}
+
+.d-none{display: none;}
+
+body {width:100vw;
+    /* font-family: 'Black Han Sans', sans-serif; */
+    /* font-family: 'Cute Font', cursive; */
+    /* font-family: 'Gaegu', cursive; */
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family: 'Jua', sans-serif; */
+    /* font-family: 'Nanum Brush Script', cursive; */
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    /* font-family: 'Nanum Gothic Coding', monospace; */
+    /* font-family: 'Nanum Myeongjo', serif; */
+    /* font-family: 'Nanum Pen Script', cursive; */
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    /* font-family: 'Noto Serif KR', serif; */
+    
+    }
+    
+/* 상단 배경 ----------------------------------------------------------------------------------------------------------------*/
+.topBg img{ width: 100vw; height:50vh; display: block; object-fit: cover;}
+
+/* 메뉴 경로 ----------------------------------------------------------------------------------------------------------------*/
+.breadcrumb {display:grid; grid-template-columns: 1fr 1200px 1fr; font-size: 1.2rem; color:var(--white); background-color: var(--drakblue);}
+.breadcrumb p {grid-column: 2/span 1; padding: 1rem; font-weight: bolder;}
+
+/* subTitle1 ----------------------------------------------------------------------------------------------------------------*/
+.subTitle1 {display:grid; grid-template-columns: 1fr 1200px 1fr; align-items: center; margin:3rem 0;}
+.subTitle1 > h2{position:relative; grid-column: 2/span 1; font-size: 2rem; font-weight: bolder; padding:1rem 2rem;}
+.subTitle1 > h2 span{font-weight: bolder; font-size: 2.3rem;}
+.subTitle1 > h2::before{position:absolute; content: ""; width:10px; height:2rem; left:0px; background-color: red;}
+.subTitle1 > h2::after{position:absolute; content: ""; width:100%; height:2px; left:0; top:4rem; background-color:lightgray;}
+
+.subTitle1 > p{grid-column: 2/span 1; line-height: 2rem; padding:2rem; background:var(--lightgreen);}
+
+.subTitle1 > .listType1 {grid-column: 2/span 1; background-color:var(--lightgray); margin-top:2rem; padding:1.5rem; font-size: 1.125rem;}
+.subTitle1 > .listType1 > li{position:relative; display:grid; grid-gap:1rem; grid-template-columns: 150px 1fr; padding-left:10px;}
+.subTitle1 > .listType1 > li span {color:gray; font-weight: bold;}
+.subTitle1 > .listType1 > li span::before {position:absolute; content: ""; width:2px; height:100%; left:0px; top:0; background: darkgray;}
+.subTitle1 > .listType1 > li+li {margin-top:1rem;}
+
+.subTitle1 > .listType2{grid-column: 2/span 1;}
+.subTitle1 > .listType2 > li:first-child{border-top: 2px solid lightgray;}
+.subTitle1 > .listType2 > li{padding:1rem 2rem; display: grid; grid-template-columns: 50px 150px 1fr; align-items: center; border-bottom: 2px solid lightgray;}
+.subTitle1 > .listType2 > li:hover{background-color:var(--blue); color:var(--white);}
+.subTitle1 > .listType2 > li > span {grid-column: 1/span 1; padding:15px; border-radius: 50%; background:var(--blue); color:var(--white); font-weight: bolder;}
+.subTitle1 > .listType2 > li:hover > span {background-color:var(--white); color:var(--blue);}
+.subTitle1 > .listType2 > li > h3 {grid-column: 2/span 1; font-size: 1.3rem; font-weight: bold; text-align: center;}
+.subTitle1 > .listType2 > li:hover > h3 {color:var(--white); font-weight: bolder;}
+.subTitle1 > .listType2 > li > p {grid-column: 3/span 1; line-height: 2rem;}
+
+.subTitle1 > .listType3{grid-column: 2/span 1;}
+.subTitle1 > .listType3 > li{padding-left:2rem; display: grid; grid-template-columns: 100px 1fr 1fr; align-items: center; border-bottom: 2px solid lightgray;}
+.subTitle1 > .listType3 > li:hover{background-color:var(--blue); color:var(--white);}
+.subTitle1 > .listType3 > li > span {grid-column: 1/span 1; padding:10px; background: var(--blue); color:var(--white); border-radius: 20px; text-align: center; line-height: 1.5rem; font-weight: bolder;}
+.subTitle1 > .listType3 > li:hover > span {background:var(--white); color:var(--black);}
+.subTitle1 > .listType3 > li > h3 {grid-column: 2/span 1; color:gray; font-size: 1.1rem; font-weight: bold; text-align: center; line-height: 2rem;}
+.subTitle1 > .listType3 > li:hover > h3 {color:var(--white);}
+.subTitle1 > .listType3 ul {display:flex; flex-direction: column; justify-content: center; align-items: center; padding:10px;}
+.subTitle1 > .listType3 ul > li {width:100%; line-height: 2rem;}
+
+.subTitle1 > .listType4{grid-column: 2/span 1;}
+.subTitle1 > .listType4 > li {display: grid; grid-template-columns: 50px 50px 1fr; align-items: center; line-height: 3rem; border-radius:50px;}
+.subTitle1 > .listType4 > li:hover {background-color:var(--blue); color:var(--white);}
+.subTitle1 > .listType4 > li > span {grid-column: 2/span 1; text-align: center; border-radius: 50%; background: var(--blue); color:var(--white); font-weight: bolder;}
+.subTitle1 > .listType4 > li:hover > span {background-color:var(--white); color:var(--blue); font-weight: bolder;}
+.subTitle1 > .listType4 > li > p{grid-column: 3/span 1; padding: 1rem 2rem;}
+
+/* subTitle2 ----------------------------------------------------------------------------------------------------------------*/
+.subTitle2 {display:grid; grid-template-columns: 1fr 300px 900px 1fr; align-items: center; margin:3rem 0 600px;}
+.subTitle2 > h2{position:relative; grid-column: 2/span 1; font-size: 2rem; font-weight: bold; align-self: flex-start;}
+.subTitle2 > h2 > span{font-weight: bolder; font-size: 2.2rem;}
+.subTitle2 > h2::before{position:absolute; content: ""; width:40px; height:10px; left:0px; top:-15px; background-color: red;}
+
+.subTitle2 > .listType1 {position:relative; grid-column: 3/span 1; display:grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr));}
+.subTitle2 > .listType1 > li{width:100%; text-align: center;}
+.subTitle2 > .listType1 > li > input {display: none;}
+.subTitle2 > .listType1 > li > label {display: block; width:100%; line-height: 3rem; border:1px solid var(--gray);}
+.subTitle2 > .listType1 > li > label:nth-child(1) {grid-column: 1/span 1;}
+.subTitle2 > .listType1 > li > label:nth-child(2) {grid-column: 2/span 1;}
+.subTitle2 > .listType1 > li > label:nth-child(3) {grid-column: 3/span 1;}
+.subTitle2 > .listType1 > li > label:nth-child(4) {grid-column: 4/span 1;}
+
+.subTitle2 > .listType1 > li > .tapContents {opacity: 0; position:absolute; width:inherit; left:0; top:3rem; display:grid; grid-template-columns: 1fr 2fr; padding:2rem 0;}
+
+.subTitle2 > .listType1 > li > .tapContents > h3 {grid-column: 1/span 1; align-self: flex-start; font-size: 1.5rem; font-weight: bold; border-top: 1px solid var(--gray); padding-top:1rem;}
+.subTitle2 > .listType1 > li > .tapContents > ul {grid-column: 2/span 1; line-height: 2rem; border-top: 1px solid var(--gray); padding-top:1rem;}
+.subTitle2 > .listType1 > li > .tapContents > ul > li {line-height: 2rem;}
+
+.subTitle2 > .listType1 > li > .tapContents > form {grid-column: 2/span 1; display:flex; flex-direction: column; justify-content: space-evenly; align-items: center; border-top: 1px solid var(--gray); padding-top:1rem;}
+.subTitle2 > .listType1 > li > .tapContents > form > input {width:80%; height:2rem; margin-bottom: 1rem;}
+.subTitle2 > .listType1 > li > .tapContents > form > select {width:80%; height:2rem; margin-bottom: 1rem;}
+.subTitle2 > .listType1 > li > .tapContents > form > .container {width:100%; height:2rem; margin-bottom: 1rem;}
+
+.subTitle2 > .listType1 > li > input[type='radio']:checked + label {color:var(--white); font-weight: bolder; background-color:var(--orange);}
+.subTitle2 > .listType1 > li > input[type='radio']:checked ~ .tapContents {opacity:1; z-index: 1;}
+
+
+/* subtitle3 ----------------------------------------------------------------------------------------------------------------*/
+.subTitle3 {display:grid; grid-template-columns: 1fr 200px 1000px 1fr; align-items: center; margin:3rem 0;}
+.subTitle3 > h2{position:relative; grid-column: 2/span 1; font-size: 2rem; font-weight: bold; align-self: flex-start;}
+.subTitle3 > h2 > span{font-weight: bolder; font-size: 2.2rem;}
+.subTitle3 > h2::before{position:absolute; content: ""; width:40px; height:10px; left:0px; top:-15px; background-color: red;}
+
+.subTitle3 > .img_container {grid-column: 3/span 1;}
+.subTitle3 > .img_container > img {width:90%;}
+
+/* btn ----------------------------------------------------------------------------------------------------------------*/
+#btn {text-align: center; margin:2rem 0;}
+#btn button{width:200px; height:70px; background: red; color:white; font-size: 1.1rem; font-weight: bolder;}

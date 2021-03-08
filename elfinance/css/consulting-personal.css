@@ -1,0 +1,17 @@
+@import "../../css/reset.css";
+@import "../../css/common.css";
+
+/* 본문내용 ---------------------------------------------------------------------------------------------------------------- */
+#pf-apply-process .pf-process-container {grid-column: 2/span 1; display:grid; grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr; justify-content: center; align-items: center; margin:2rem 0; background: #f9fafb;}
+#pf-apply-process .pf-process-container a {display: block; width: inherit; height: auto; display: flex; justify-content: center;}
+#pf-apply-process .pf-process-container a #pf-apply-step1{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures1.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a #pf-apply-step2{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures2.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a #pf-apply-step3{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures3.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a #pf-apply-step4{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures4.png'); width:200px; height: 200px;}
+
+#pf-apply-process .pf-process-container a:hover #pf-apply-step1{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures1_hover.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a:hover #pf-apply-step2{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures2_hover.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a:hover #pf-apply-step3{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures3_hover.png'); width:200px; height: 200px;}
+#pf-apply-process .pf-process-container a:hover #pf-apply-step4{background:center / cover url('../img/bg/Personal_financial_procedures/Personal_financial_procedures4_hover.png'); width:200px; height: 200px;}
+
+#pf-apply-process .pf-process-container span {font-size: 2rem; font-weight: bolder;}

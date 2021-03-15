@@ -11,13 +11,14 @@
     <script src="https://kit.fontawesome.com/12530f3a2e.js" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/topMenu.css">
-    <link rel="stylesheet" href="./css/elgroup.css">
+    <link rel="stylesheet" href="./css/topMenu.css?v2">
+    <link rel="stylesheet" href="./css/elgroup.css?v2">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
+
     <!-- js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/elgrop.js" defer></script>
+    <script src="./js/elgroupModal.js" defer></script>
 </head>
 
 <body>
@@ -84,7 +85,37 @@
                         <li><a href="">고객센터</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                <li><a href="#" class="elgroupModal_button"><i class="fas fa-bars"></i></a>
+                    <!-- 전체메뉴 -->
+                    <div class="elgroupModal d-none">
+                        <div class="modal_overlay"></div>
+                        <div class="modal_content">
+                            <ul>
+                                <li><a href="">회사소개</a>
+                                    <ul>
+                                        <li><a href="./aboutUs.html">인사말</a></li>
+                                        <li><a href="./history.html">연혁</a></li>
+                                        <li><a href="./organizationChart.html">조직도</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">사업영역</a>
+                                    <ul>
+                                        <li><a href="./eledu/eledu.html">기업교육</a></li>
+                                        <li><a href="./elfinance/elfinance.html">보험&middot;금융</a></li>
+                                        <li><a href="./eltax/eltax.html">세무&middot;회계</a></li>
+                                        <li><a href="">법무&middot;노무</a></li>
+                                        <li><a href="">문화&middot;콘텐츠</a></li>
+                                        <li><a href="">LMS사업</a></li>
+                                        <li><a href="">도시개발&middot;재건축</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./map.html">오시는 길</a></li>
+                                <li><a href="">고객센터</a></li>
+                            </ul>
+                            <button>X</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </header>

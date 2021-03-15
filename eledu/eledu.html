@@ -9,8 +9,10 @@
 
     <!-- meta tag -->
     <meta name="title" content="이엘에듀 평생교육">
-    <meta name="keyword" content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
-    <meta name="keywords" content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
+    <meta name="keyword"
+        content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
+    <meta name="keywords"
+        content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
     <meta name="description" content="이엘에듀는 온라인 평생교육원으로서 최고의 교육운영방법으로 교육진행을 제공해 드릴 것을 약속드립니다.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="이엘에듀">
@@ -21,59 +23,66 @@
     <meta property="twitter:description" content="이엘에듀는 온라인 평생교육원으로서 최고의 교육운영방법으로 교육진행을 제공해 드릴 것을 약속드립니다.">
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/top_menu.css">
     <link rel="stylesheet" href="./css/eledu.css">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 
-    <!-- swiper css-->
+    <!-- swiper css (open source & 자체 제작용)-->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/slideMoving.css">
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/12530f3a2e.js" crossorigin="anonymous"></script>
 
     <!-- swiper script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/slideMoving.js" defer></script>
     <script src="./js/eledu.js" defer></script>
 </head>
 
 <body>
-    <div class="fixed_menu_icon">
-        <a href="#">
-            <i class="fas fa-plus"></i>
-        </a>
-    </div>
-    <div class="fixed_menu opacity0">
+
+    <!-- 왼쪽 고정 메뉴 -->
+    <div class="fixed_menu">
         <ul>
-            <li><a href="https://www.eledu.co.kr/cscenter/qna_write.php"><i class="fas fa-graduation-cap"></i><span>교육문의</span></a></li>
-            <li><a href="https://www.eledu.co.kr/eduask/estimate.php"><i class="fas fa-won-sign"></i><span>견적문의</span></a></li>
+            <li><a href="https://www.eledu.co.kr/cscenter/qna_write.php"><i
+                        class="fas fa-graduation-cap"></i><span>교육문의</span></a></li>
+            <li><a href="https://www.eledu.co.kr/eduask/estimate.php"><i
+                        class="fas fa-won-sign"></i><span>견적문의</span></a></li>
             <li><a href="https://939.co.kr/eledu/"><i class="fas fa-tools"></i><span>원격지원</span></a></li>
-            <li><a href="https://www.eledu.co.kr/member/login.php"><i class="fas fa-user"></i><span>로그인</span></a></li>
+            <li>
+                <!-- 로그인,로그아웃  -->
+                <? if(isset($_SESSION['LoginMemberID'])) { ?>
+                    <li>
+                        <a href="https://www.eledu.co.kr/member/logout.php">
+                            <i class="fas fa-user"></i><span>로그아웃</span></a>
+                    </li>
+                <?}else{?>
+                    <li>
+                        <a href="https://www.eledu.co.kr/member/login.php">
+                            <i class="fas fa-user"></i><span>로그인</span>
+                        </a>
+                    </li>
+                <?}?>
+            </li>
         </ul>
     </div>
 
     <header>
-        <div class="container">
-            <div class="layer_popup" id="layer_popup" style="visibility: visible;">
-                <p>이엘에듀 주요 광고란입니다.</p>
-                <div class="banner_btn_wrap">
-                    <form action="" name="pop_form">
-                        <input type="checkbox" id="check_layer">
-                        <label for="check_layer">하루동안 열지 않음</label>
-                        <button class="btn_layer">닫기</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- 관련 공공기관 로고 -->
         <div class="container">
             <div class="top">
-                <a href="https://www.eledu.co.kr"><img src="./img/logo/eledu_logo_black_color.png" alt="이엘에듀로고"></a>
+                <a href="https://www.eledu.co.kr"><img src="./img/logo/eledu_logo_black.png" alt="이엘에듀로고"></a>
                 <ul>
                     <li><img src="./img/gov/gov1.jpg" alt="고용노동부인증교육기관"></li>
                     <li><img src="./img/gov/gov2.jpg" alt="안전보건교육위탁기관"></li>
@@ -81,82 +90,77 @@
                 </ul>
             </div>
         </div>
+        <!-- 메뉴 -->
         <div class="wide_container bg_blue">
             <div class="container">
                 <div class="menu">
                     <ul>
-                        <li><a href="#">온라인</a>
+                        <li><a href="https://www.eledu.co.kr/cpsinfo/cps.php">법정의무</a>
                             <ul>
-                                <li><a href="#">법정의무교육</a></li>
-                                <li><a href="#">안전보건</a></li>
-                                <li><a href="#">직무역량강화</a></li>
-                                <li><a href="#">외국어</a></li>
-                                <li><a href="#">자격증</a></li>
+                                <li><a href="https://www.eledu.co.kr/cpsinfo/cps.php">법정의무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/cpsinfo/cps_other.php">기타 법정의무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/eduask/estimate.php">견적문의</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">오프라인</a>
+                        <li><a href="https://www.eledu.co.kr/worker/info.php">직무교육</a>
                             <ul>
-                                <li><a href="#">관리감독자교육</a></li>
-                                <li><a href="#">직급별교육</a>
-                                    <ul>
-                                        <li><a href="#">신입사원교육</a></li>
-                                        <li><a href="#">계층별 리더십교육</a></li>
-                                        <li><a href="#">승진자 교육</a></li>
-                                        <li><a href="#">승진 후보자 교육</a></li>
-                                    </ul>
-    
+                                <li><a href="https://www.eledu.co.kr/worker/info.php">직무교육안내</a></li>
+                                <li><a href="https://www.eledu.co.kr/worker/lecture.php?ParentCategory=57">환급교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/worker/lecture.php?ParentCategory=57">비환급교육</a>
                                 </li>
-                                <li><a href="#">직무강화교육</a>
-                                    <ul>
-                                        <li><a href="#">프로그래밍</a></li>
-                                        <li><a href="#">Data</a></li>
-                                        <li><a href="#">빅데이터</a></li>
-                                        <li><a href="#">인공지능</a></li>
-                                        <li><a href="#">IoT</a></li>
-                                    </ul>
+                                <li><a href="https://www.eledu.co.kr/worker/refund.php">환급절차</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.eledu.co.kr/kv10/kvoucher.html">K비대면바우처</a>
+                            <ul>
+                                <li><a href="https://www.eledu.co.kr/kv10/required_courses.html">법정의무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/job.html">직무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/hospital.html">요양병원 직무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/culture.html">교양교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/language.html">어학교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/leader.html">직급별 리더십 교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">ITVendor 공인인증 직무교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/liveJob.html">비대면 라이브 직무교육 클래스</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/all.html">ALL패키지</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/license.html">자격증 과정</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.eledu.co.kr/refund/tcardinfo.php">내일배움카드</a>
+                            <ul>
+                                <li><a href="https://www.eledu.co.kr/refund/tcardinfo.php">소개</a></li>
+                                <li><a href="https://www.hrd.go.kr/hrdp/ma/pmmao/indexNew.do" target="_blank">발급</a>
                                 </li>
+                                <li><a href="https://www.eledu.co.kr/refund/lecture.php?ParentCategory=93">과정</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">전문가컨설팅</a>
+                        <li><a href="#">어학&middot;자격증</a>
                             <ul>
-                                <li><a href="#">세무회계</a></li>
-                                <li><a href="#">법률자문</a></li>
-                                <li><a href="#">컨텐츠 개발</a></li>
-                                <li><a href="#">홈페이지제작</a></li>
-                                <li><a href="#">광고</a></li>
+                                <li><a href="#">준비중</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">내일배움카드</a>
+                        <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">IT vendor</a>
                             <ul>
-                                <li><a href="#">소개</a></li>
-                                <li><a href="#">절차</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">소개</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">K비대면바우처</a>
-                            <ul>
-                                <li><a href="#">법정의무교육</a></li>
-                                <li><a href="#">직무교육</a></li>
-                                <li><a href="#">요양병원 직무교육</a></li>
-                                <li><a href="#">교양교육</a></li>
-                                <li><a href="#">어학교육</a></li>
-                                <li><a href="#">직급별 리더십 교육</a></li>
-                                <li><a href="#">ITVendor 공인인증 직무교육</a></li>
-                                <li><a href="#">비대면 라이브 직무교육 클래스</a></li>
-                                <li><a href="#">ALL패키지</a></li>
-                                <li><a href="#">자격증 과정</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">요양기관</a>
+                        <li><a href="#">요양&middot;의료</a>
                             <ul>
                                 <li><a href="#">요양병원</a></li>
                                 <li><a href="#">요양원</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">이엘계열사</a>
-                            <ul>
-                                <li><a href="#">이엘금융파트너</a></li>
-                                <li><a href="#">이엘세무회계</a></li>
-                            </ul>
+                        <li>
+                            <? if(isset($_SESSION['LoginMemberID'])) { ?>
+                                <li><a href="https://www.eledu.co.kr/mylecture/lecture_ing.php"><span style="font-weight: bolder; color:yellow"> 나의강의실</span></a></li>
+                                <li><a href="https://www.eledu.co.kr/member/logout.php"><span style="font-weight: bolder; color:yellow">로그아웃</span></a></li>
+                                
+                            <?}else{?>
+                                <li>
+                                    <a href="https://www.eledu.co.kr/member/login.php">
+                                        <span style="font-weight: bolder; color:yellow">로그인</span>
+                                    </a>
+                                </li>
+                            <?}?>
                         </li>
                     </ul>
                     <div class="bg hide"></div>
@@ -165,111 +169,121 @@
         </div>
     </header>
 
-    <section>
-        <div class="swiper-container top_bg">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
+    <section id="slider1-container">
+            <!-- auto moving slides -->
+            <div id="slider1">
+                <div class="slide-container slideCenter">
                     <div class="tit_container">
                         <p>이엘에듀는 핵심만 콕!</p>
                         <h1>프로가 되기위한 <span>직무교육</span></h1>
-                        <a href="#"><div class="link">바로가기</div></a>
+                        <a href="https://www.eledu.co.kr/worker/lecture.php?ParentCategory=57">
+                            <div class="link">바로가기</div>
+                        </a>
                     </div>
                     <img src="./img/top_bg/1.jpg" alt="직무교육">
                 </div>
 
-                <div class="swiper-slide">
+                <div class="slide-container slideOut">
                     <div class="tit_container">
                         <p>이엘에듀와 함께하는</p>
                         <h1><span>법정의무교육</span></h1>
-                        <a href="#"><div class="link">바로가기</div></a>
+                        <a href="https://www.eledu.co.kr/cpsinfo/cps.php">
+                            <div class="link">바로가기</div>
+                        </a>
                     </div>
                     <img src="./img/top_bg/2.jpg" alt="법정의무교육">
                 </div>
 
-                <div class="swiper-slide">
+                <div class="slide-container slideOut">
                     <div class="tit_container">
                         <p>40만원에 400만원 바우처 받자!</p>
                         <h1>K 비대면 바우처</h1>
-                        <a href="#"><div class="link">바로가기</div></a>
+                        <a href="https://www.eledu.co.kr/kv10/kvoucher.html">
+                            <div class="link">바로가기</div>
+                        </a>
                     </div>
                     <img src="./img/top_bg/3.jpg" alt="직무교육">
                 </div>
             </div>
-        </div>
+            <!-- auto moving slides button -->
+            <div class="slider-btn1">
+                <div class="slider-button" data-cont="0">직무교육</div>
+                <div class="slider-button" data-cont="1">법정의무교육</div>
+                <div class="slider-button" data-cont="2">K 비대면 바우처</div>
+            </div>
     </section>
 
-    <section class="bg_skyblue padding-top-2rem padding-bottom-2rem">
+    <!-- 직무교육 -------------------------------------------------------------------------->
+    <section class="padding-top-2rem padding-bottom-2rem border-bottom">
         <div class="container flex-r">
             <div class="swiper_title">
-                <h1>직무교육</h1>
-                <!-- <p>직무전문가 양성코스로 남다른 인재가 되어보자!<br>이엘에듀와 함께하는 직무교육~</p> -->
+                <a href="https://www.eledu.co.kr/worker/lecture.php?ParentCategory=57"><img src="./img/job/job-title.png" alt="직무교육"></a>
             </div>
-            <div class="swiper-container second">
+            <div class="swiper-container second cover">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="./img/job/1.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/job/2.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/job/3.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="계약서 검토와 작성법"><img src="./img/job/1.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="종합소득세 신고"><img src="./img/job/2.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="세무조사"><img src="./img/job/3.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="인사노무 관리실무"><img src="./img/job/4.jpg" alt=""></a></div>
                 </div>
-                <div class="swiper-pagination"></div>
-
+                <!-- <div class="swiper-pagination"></div> -->
                 <!-- <div class="swiper-button-prev"></div> -->
                 <!-- <div class="swiper-button-next"></div> -->
             </div>
         </div>
     </section>
 
+    <!-- 법정의무교육 ----------------------------------------------------------------------->
+    <section class="padding-top-2rem padding-bottom-2rem border-bottom">
+        <div class="container flex-r">
+            <div class="swiper_title">
+                <a href="https://www.eledu.co.kr/cpsinfo/cps.php"><img src="./img/obli/cps-title.png" alt=""></a>
+            </div>
+            <div class="swiper-container third cover">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#" data-conts="장애인인식개선교육"><img src="./img/obli/cps_improve.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="성희롱예방교육"><img src="./img/obli/cps_prevent.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="개인정보보호교육"><img src="./img/obli/cps_privacy.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="안전보건교육"><img src="./img/obli/cps_safety.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="직장내괴롭힘금지교육"><img src="./img/obli/cps_other01.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="노인학대신고자의무교육"><img src="./img/obli/cps_other02.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="아동학대신고자의무교육"><img src="./img/obli/cps_other03.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="긴급복지지원신고의무자교육"><img src="./img/obli/cps_other04.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="퇴직연금 교육"><img src="./img/obli/cps_other05.png" alt="성희롱예방교육"></a></div>
+                    <div class="swiper-slide"><a href="#" data-conts="소방/전열/미세먼지 교육"><img src="./img/obli/cps_other06.png" alt="성희롱예방교육"></a></div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-button-next"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 비대면바우처 -------------------------------------------------------------------------->
     <section class="padding-top-2rem padding-bottom-2rem">
         <div class="container flex-r">
-            <div class="swiper_title">
-                <h1>법정의무교육</h1>
-            </div>
-            <div class="swiper-container third">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_improve.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_prevent.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_privacy.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_safety.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other01.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other02.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other03.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other04.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other05.png" alt="성희롱예방교육"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/obli/cps_other06.png" alt="성희롱예방교육"></a></div>
-                </div>
-                <div class="swiper-pagination"></div>
-
-                <!-- <div class="swiper-button-prev"></div> -->
-                <!-- <div class="swiper-button-next"></div> -->
-            </div>
-        </div>
-    </section>
-
-    <section class="bg_gray padding-top-2rem padding-bottom-2rem">
-        <div class="container flex-r">
             <div class="swiper_title ">
-                <h1>K 비대면 바우처 플랫폼</h1>
-                <p>중소기업 / 벤처기업 / 스타트업 및 기관 등에  <span>최대 400만원 (자기부담 10%)</span>의 바우처를 제공하여 화상회의, 재택솔루션, 온라인교육, 보안솔루션 등의 <span>비대면 업무환경을 조성</span>하는 사업입니다.</p>
+                <a href="https://www.eledu.co.kr/kv10/kvoucher.html"><img src="./img/voucher/voucher-title.png" alt=""></a>
             </div>
-            <div class="swiper-container fourth">
+            <div class="swiper-container fourth cover">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/all.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/culture.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/hospital.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/ITvendor.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/job.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/language.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/leader.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/license.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/liveJob.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/voucher/required_courses.jpg" alt=""></a>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="all 패키지"><img src="./img/voucher/all.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="교양교육"><img src="./img/voucher/culture.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="요양병원 직무교육"><img src="./img/voucher/hospital.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="IT vendor"><img src="./img/voucher/ITvendor.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="직무교육"><img src="./img/voucher/job.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="어학교육"><img src="./img/voucher/language.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="직급별 리더십 교육"><img src="./img/voucher/leader.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="자격증"><img src="./img/voucher/license.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="비대면라이브직무교육"><img src="./img/voucher/liveJob.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="https://www.eledu.co.kr/kv10/kvoucher.html" data-conts="법정의무교육"><img src="./img/voucher/required_courses.jpg" alt=""></a>
                     </div>
                 </div>
                 <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+
                 <!-- If we need navigation buttons -->
                 <!-- <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div> -->
@@ -277,105 +291,9 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <a href="https://www.eledu.co.kr"><img src="./img/logo/eledu_logo_black.jpg" alt="이엘에듀로고"></a>
-            <div class="companyInfo">
-                <ul>
-                    <li><a href="https://www.eledu.co.kr/educenter/introduction.php">교육원소개</a></li>
-                    <li><a href="https://www.eledu.co.kr/member/policy01.php">이용약관</a></li>
-                    <li><a href="https://www.eledu.co.kr/member/policy02.php">개인정보정책</a></li>
-                    <li><a href="https://www.eledu.co.kr/member/policy04.php">이메일무단수집거부</a></li>
-                </ul>
-                <ul>
-                    <li>서울특별시 영등포구 당산로38길 12 진아케이드빌 4층</li>
-                    <li>고객상담센터 : 02-6433-5803~6</li>
-                    <li>팩스 : 0303-3444-5801</li>
-                    <li>이메일 : <a href="#">manage@eledu.co.kr</a></li>
-                    <li>계좌번호 : 국민은행 - 895401-00-022731</li>
-                    <li>상호명 : ㈜ 이엘에듀테크</li>
-                    <li>대표자 : 음지환</li>
-                    <li>사업자 등록번호 : 840 - 86 - 00789</li>
-                    <li>통신판매업신고번호 : 제 2017-서울영등포-1606 호</li>
-                    <li>개인정보책임자 : 음지환</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <!-- foot 영역 ---------------------------------------------------------------------------->
+    <iframe src="./footer.html" frameborder="0" width="100%" height="450" scrolling="no" marginwidth="0"
+        marginheight="0"></iframe>
 </body>
 
 </html>
-
-
-
-<!-- 
-    iswiper  좌우로 캐러슬 기능 구현시 사용.
-위아래로  fullpage js 로 사용
-statcounter에서 해상도 사용량 통계를 바탕으로 사이트 제작할것.
-http://styleguide.co.kr/content/typo/line-height.php
-
-https://masonry.desandro.com/#cdn 
-
-https://studiomeal.com/archives/533
-
-뉴엠 휴넷 러닝뱅크 올윈에듀
-github 사용법 체크하기
-
-https://m.blog.naver.com/PostView.nhn?blogId=juhee0_0&logNo=221142270044&categoryNo=17&proxyReferer=https:%2F%2Fwww.google.com%2F
-
-레이어 팝업 소스
-<body>
- //Layer Popup Begins 
-<div class="layerPop">
-	<div class="inform-layer">
-		<div class="btn-popup-close">
-			<a id="btn-inform-close" class="btn-close" title="오늘하루 보지않기"><span class="blind">닫기</span></a>
-		</div>					
-		<div class="inform-box">
-			<div class="inform-header">
-				<img src="../_img/common/logo.png" title="logo">
-				<h2>알려 드립니다</h2>
-			</div>			
-			<div class="inform-body">
-				<p>아래 기간 동안 시스템 점검으로 인하여<br>서비스
-접속이 제한 됨을 알려 드립니다. </p>
-				<p class="mt20">이용에 불편을 드려 죄송합니다.</p>
-				<p class="inform-date mt20">2017. 11.24(금) 19:00 ~ 2017.11.27(월) 08:00</p>
-			</div>		
-		</div>
-	</div>
-</div>
-<script>
-$(document).ready(function(){
-	var layer = $('.layerPop');
-    var btnClose = $('.btn-close');
-	var edate= new Date("2017/11/27 08:00:00"); 
-
-	//닫기버튼 누를시 하루동안 열지않기
-	cookiedata = document.cookie;
-
-    if ( Date.now() <= edate && cookiedata.indexOf("layerCookie=done") < 0 ){     
-		layer.show();
-	}
-    else {
-    	layer.hide();
-    }
-
-	function setCookie( name, value, expiredays ) {
-        var todayDate = new Date();
-        todayDate.setDate( todayDate.getDate() + expiredays ); 
-        document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-    }
-
-	btnClose.on("click", function(){
-        //expiredays의 1은 하루를 의미한다, 일주일은 7, 1년은 365로 입력
-		setCookie( "layerCookie", "done" , 1);
-		layer.fadeOut('fast');
-	})
-});
-</script>
-// LayerPopup Ends 
-</body>
--->
-
-<!-- https://m.blog.naver.com/PostView.nhn?blogId=juhee0_0&logNo=221142270044&categoryNo=17&proxyReferer=https:%2F%2Fwww.google.com%2F -->

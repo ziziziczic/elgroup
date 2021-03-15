@@ -40,17 +40,5 @@
     /* MQ 
     ------------------------------------------------------------------------------------*/
     @media screen and (max-width:1200px) {
-        /* 오시는 길 */
-        .wayToCome h1 {grid-column: 1/-1;}
-            .companyAddress {grid-column: 1/-1;}
 
-        /* 지도 */
-        .kakaoMap{width:100vw; height: 56.25vh;}
-        .kakaoMap .container {width:100%; margin-bottom:56.25%;}
-        .kakaoMap .container #map {width:100vw; height:56.25vh;}
-
-        /* 교통편 */
-        .transportation h1{width:100vw;}
-            .tapContainer {width:100vw;}
-            .tapContainer li .contents {width:100vw;}
 }

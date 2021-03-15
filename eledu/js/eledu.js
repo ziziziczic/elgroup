@@ -8,24 +8,24 @@ ul.addEventListener("mouseleave",()=>{ bg.classList.add("hide");});  // mouselea
 
 // -----------------------------------------------------------------------------------------------
 // fiexed_menu_icon 클릭시, 해당 메뉴가 왼쪽으로 사라지고, 상세메뉴 fixed_menu 가 나타남.
-const fixed_menu_icon = document.querySelector(".fixed_menu_icon");
-const fixed_menu = document.querySelector(".fixed_menu");
+// const fixed_menu_icon = document.querySelector(".fixed_menu_icon");
+// const fixed_menu = document.querySelector(".fixed_menu");
 
-fixed_menu_icon.addEventListener("mouseover",() => {
-  fixed_menu_icon.classList.add("opacity0");
-  fixed_menu_icon.classList.add("translate-X");
+// fixed_menu_icon.addEventListener("mouseover",() => {
+//   fixed_menu_icon.classList.add("opacity0");
+//   fixed_menu_icon.classList.add("translate-X");
 
-  fixed_menu.classList.remove("opacity0");
-  fixed_menu.classList.add("translateX");
-});
+//   fixed_menu.classList.remove("opacity0");
+//   fixed_menu.classList.add("translateX");
+// });
 
-fixed_menu.addEventListener("mouseleave",() => {
-  fixed_menu_icon.classList.remove("opacity0");
-  fixed_menu_icon.classList.remove("translate-X");
+// fixed_menu.addEventListener("mouseleave",() => {
+//   fixed_menu_icon.classList.remove("opacity0");
+//   fixed_menu_icon.classList.remove("translate-X");
 
-  fixed_menu.classList.remove("translateX");
-  fixed_menu.classList.add("opacity0");
-});
+//   fixed_menu.classList.remove("translateX");
+//   fixed_menu.classList.add("opacity0");
+// });
 
 // -----------------------------------------------------------------------------------------------
 // swiper start 

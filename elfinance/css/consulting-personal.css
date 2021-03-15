@@ -1,5 +1,5 @@
-@import "../../css/reset.css";
-@import "../../css/common.css";
+@import "./css/reset.css";
+@import "./css/common.css";
 
 /* 본문내용 ---------------------------------------------------------------------------------------------------------------- */
 #pf-apply-process .pf-process-container {grid-column: 2/span 1; display:grid; grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr; justify-content: center; align-items: center; margin:2rem 0; background: #f9fafb;}

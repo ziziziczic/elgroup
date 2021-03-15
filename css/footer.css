@@ -1,19 +1,34 @@
 @import "./reset.css";
+@import "./common.css";
 
 footer {width:100%; background-color: #000000; display: grid; grid-template-columns: 1fr 1200px 1fr; justify-content: center; align-items: center;}
-footer .container {grid-column: 2/span 1; display:grid; grid-gap:1rem; grid-template-columns: 1fr 1fr 2fr; justify-content: center; align-items: center; padding:2rem 0; color:white;}
-footer .container > a {max-width:100%; padding:2rem;}
-footer .container ul {max-width:100%; display: flex; flex-direction: column; justify-content: space-evenly; padding:2rem;}
-footer .container ul li {line-height: 2rem;}
-footer .container ul li a{color:white;}
+footer > .container {grid-column: 2/span 1; display:grid; grid-gap:1rem; grid-template-columns: 1fr 1fr 2fr; justify-content: center; align-items: center; padding:2rem 0; color:white;}
+footer > .container > a {max-width:100%; padding:2rem;}
+footer > .container > ul {max-width:100%; display: flex; flex-direction: column; justify-content: space-evenly; padding:2rem;}
+footer > .container > ul > li {line-height: 2rem;}
+footer > .container > ul > li a{color:white;}
 
-@media screen and (max-width:1300px){
-    footer {grid-template-columns: 1fr 1fr;}
-    footer .container {grid-column: 1/-1; grid-template-columns: 1fr 1fr;}
-    footer .container ul:last-child {grid-column: 1/-1; border-top: 1px solid white;}
+/* MQ ------------------------------------------------------------------*/
+@media screen and (max-width:1200px){
+footer {grid-template-columns: 1fr;}
+footer > .container {grid-column: 1/-1;} 
+footer > .container > a { display: flex; justify-content: center; padding:1rem;}
+footer > .container > ul {padding:1rem;}
+footer > .container > ul >li {line-height: 1.5rem;}
 }
 
-@media screen and (max-width:768px){
-    footer .container a {grid-column: 1/-1;}
-    footer .container ul {grid-column: 1/-1; border-top: 1px solid white;}
+@media screen and (max-width:900px){
+footer > .container {grid-template-rows: 1fr 3fr; grid-template-columns: 1fr 1fr; padding:1rem;}
+footer > .container > a { padding:0;}
+footer > .container > a > img { width:60%;}
+footer > .container > ul { padding: 0 0 0 1rem;}
+footer > .container > #last-child {grid-row: 2/span 1; grid-column: 1/span 2; padding-left:3rem;}
+}
+
+@media screen and (max-width: 460px){
+footer > .container {grid-template-rows: 1fr 2fr 4fr; grid-template-columns: 1fr;  grid-gap:0.5em; padding:0;}
+footer > .container > a {grid-column: 1/-1;}
+footer > .container > a > img { width:30%;}
+footer > .container > ul {grid-row:2/span 1; grid-column: 1/-1; font-size: .9rem;}
+footer > .container > #last-child {grid-row:3/span 1; grid-column: 1/-1; font-size: .8rem; padding-left:1rem;}
 }

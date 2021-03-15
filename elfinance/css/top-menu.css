@@ -1,5 +1,5 @@
-@import "../../css/reset.css";
-@import "../../css/common.css";
+@import "./css/reset.css";
+@import "./css/common.css";
 
 .top_menu {position:absolute; z-index: 10; left:0; top:0; width: 100vw; height: 100px; background-color: rgba(0,0,0,.4); color:#fff;}
 .top_menu a {padding: 5px 5px; color: #fff;}

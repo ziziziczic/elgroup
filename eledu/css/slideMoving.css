@@ -1,0 +1,30 @@
+/* 슬라이드를 화면 가운데로 옮기거나 밖으로 내보내는 기능 */
+.slideCenter {left:0; opacity: 1;}
+.slideOut {left:100%; opacity:0;}
+
+/* auto moving slides */
+#slider1 {position:relative; width:100%; height: 80vh; background: url("../img/top_bg/1.jpg") no-repeat center;}
+#slider1 > .slide-container {position:absolute; top:0; width: 100%; height: 100%; transition:all 1s ease-in;}
+#slider1 > .slide-container > .tit_container {position:absolute; display:flex; flex-direction: column; justify-content: space-evenly; align-items: flex-start; right:20%; top:100px; width: 600px; height: 230px; padding: 1.5rem; border-radius: 50px 0; background-color: rgba(0,0,0,.3); color:white;}
+#slider1 > .slide-container > .tit_container > p {font-size:1.5rem;}
+#slider1 > .slide-container > .tit_container > h1 {font-size:2.8rem; font-weight: bold; color:yellow;}
+#slider1 > .slide-container > .tit_container > a { color: white;}
+#slider1 > .slide-container > .tit_container > a > div{font-size: 1.8rem; border:1px solid white; padding:1rem 2rem; border-radius: 20px 0;}
+#slider1 > .slide-container > .tit_container > a:hover > div { background-color: orange; color:black;}
+
+#slider1 > .slide-container > img { width:100%; height:100%; object-fit: cover;}
+
+/* auto moving slides 의 button */
+#slider1-container {position:relative; width:100%;}
+#slider1-container > .slider-btn1 {position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:600px; height:auto; display:flex; justify-content: center;}
+#slider1-container > .slider-btn1 > .slider-button {width:200px; height: 20px; padding:1rem 1.5rem; text-align: center; font-weight: bolder; background-color: rgba(0,0,0,.5); color:white; font-weight: bolder; border:1px solid white; border-radius: 20px 20px 0 0;}
+#slider1-container > .slider-btn1 > .slider-button:hover {cursor:pointer; background-color: orange; transform: scale(1.2); color:black; border-radius: 20px;}
+
+/* MQ ----------------------------------------------------------------- */
+@media screen and (max-width:1200px){
+    /* 위치를 고정하지 않으면 모바일 기기에서 html 영역이 보임. */
+    #slider1 {
+        width:1200px;
+    }
+}
+/* -------------------------------------------------------------------- */

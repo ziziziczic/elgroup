@@ -1,5 +1,5 @@
-@import "../../css/reset.css";
-@import "../../css/common.css";
+@import "./css/reset.css";
+@import "./css/common.css";
 
 .accodion {grid-column: 2/span 1;}
 .accodion > li {display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f9fafb; border-bottom: 1px solid gray;}

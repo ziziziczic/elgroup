@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;700;900&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@400;700;900&display=swap');
 
 /* 공통사항 */
 :root {
@@ -25,18 +25,26 @@
 
 body {width:100vw;
     /* font-family: 'Black Han Sans', sans-serif; */
-    /* font-family: 'Gothic A1', sans-serif; */
+    /* font-family: 'Cute Font', cursive; */
+    /* font-family: 'Gaegu', cursive; */
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family: 'Jua', sans-serif; */
+    /* font-family: 'Nanum Brush Script', cursive; */
     /* font-family: 'Nanum Gothic', sans-serif; */
-    font-family: 'Nanum Gothic Coding', monospace;
+    /* font-family: 'Nanum Gothic Coding', monospace; */
+    /* font-family: 'Nanum Myeongjo', serif; */
+    /* font-family: 'Nanum Pen Script', cursive; */
     /* font-family: 'Noto Sans KR', sans-serif; */
+    /* font-family: 'Noto Serif KR', serif; */
+    
     }
     
 /* 상단 배경 ----------------------------------------------------------------------------------------------------------------*/
-.topBg > img{ width: 100vw; height:50vh; display: block; object-fit: cover;}
+.topBg img{ width: 100vw; height:50vh; display: block; object-fit: cover;}
 
 /* 메뉴 경로 ----------------------------------------------------------------------------------------------------------------*/
 .breadcrumb {display:grid; grid-template-columns: 1fr 1200px 1fr; font-size: 1.2rem; color:var(--white); background-color: var(--drakblue);}
-.breadcrumb > p {grid-column: 2/span 1; padding: 1rem; font-weight: bolder;}
+.breadcrumb p {grid-column: 2/span 1; padding: 1rem; font-weight: bolder;}
 
 /* subTitle1 ----------------------------------------------------------------------------------------------------------------*/
 .subTitle1 {display:grid; grid-template-columns: 1fr 1200px 1fr; align-items: center; margin:3rem 0;}
@@ -109,75 +117,16 @@ body {width:100vw;
 .subTitle2 > .listType1 > li > input[type='radio']:checked + label {color:var(--white); font-weight: bolder; background-color:var(--orange);}
 .subTitle2 > .listType1 > li > input[type='radio']:checked ~ .tapContents {opacity:1; z-index: 1;}
 
+
 /* subtitle3 ----------------------------------------------------------------------------------------------------------------*/
-.subTitle3 {display:grid; grid-template-columns: 1fr 1200px 1fr; align-items: center; margin:3rem 0;}
-.subTitle3 > h2{position:relative; grid-column: 2/span 1; font-size: 2rem; font-weight: bolder; padding:1rem 2rem;}
-.subTitle3 > h2::before{position:absolute; content: ""; width:10px; height:2rem; left:0px; background-color: red;}
-.subTitle3 > h2::after{position:absolute; content: ""; width:100%; height:2px; left:0; top:4rem; background-color:lightgray;}
-.subTitle3 > .img-container {grid-column: 2/span 1;}
-.subTitle3 > .img-container > img {display: block; margin:0 auto; max-width: 1200px; width:100%;}
+.subTitle3 {display:grid; grid-template-columns: 1fr 200px 1000px 1fr; align-items: center; margin:3rem 0;}
+.subTitle3 > h2{position:relative; grid-column: 2/span 1; font-size: 2rem; font-weight: bold; align-self: flex-start;}
+.subTitle3 > h2 > span{font-weight: bolder; font-size: 2.2rem;}
+.subTitle3 > h2::before{position:absolute; content: ""; width:40px; height:10px; left:0px; top:-15px; background-color: red;}
+
+.subTitle3 > .img_container {grid-column: 3/span 1;}
+.subTitle3 > .img_container > img {width:90%;}
 
 /* btn ----------------------------------------------------------------------------------------------------------------*/
 #btn {text-align: center; margin:2rem 0;}
 #btn button{width:200px; height:70px; background: red; color:white; font-size: 1.1rem; font-weight: bolder;}
-
-/* MQ ---------------------------------------------------------------------------------------------------------------*/
-
-/* 상단 배경 & 메뉴 경로 -------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:1200px){
-    .topBg > img{height:40vh;}
-    .breadcrumb {grid-template-columns: 1fr; font-size: 1rem;}
-    .breadcrumb > p {grid-column: 1/-1;}
-}
-
-@media screen and (max-width:768px){
-    .topBg > img{height:30vh;}
-    .breadcrumb {font-size: .9rem;}
-    .breadcrumb > p {padding:.7rem;}
-}
-
-/* subTitle1 --------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:1200px){
-    .subTitle1 {grid-template-columns: 1fr; margin:1rem;}
-    .subTitle1 > h2 {grid-column: 1/-1; font-size: 1.5rem;}
-    .subTitle1 > .listType1 {grid-column: 1/-1;}
-}
-
-@media screen and (max-width:768px){
-    .subTitle1 > h2 {font-size: 1rem;}
-    .subTitle1 > h2::before{height:1rem;}
-    .subTitle1 > h2::after{top:3rem;}
-
-    .subTitle1 > .listType1 {margin-top:.8rem; font-size: .9rem;}
-    .subTitle1 > .listType1 > li{grid-gap:.6rem; grid-template-columns: 1fr 2fr; padding-left:.5rem;}
-    .subTitle1 > .listType1 > li span {}
-    .subTitle1 > .listType1 > li+li {margin-top:.9rem;}
-}
-
-/* subTitle3 --------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 1200px) {
-    .subTitle3 {grid-template-columns: 1fr; margin:1rem;}
-    .subTitle3 > h2 {grid-column: 1/-1;}
-    .subTitle3 > .img-container {grid-column: 1/-1; max-width:1200px;}
-
-}
-@media screen and (max-width: 1000px) {
-    .subTitle3 > .img-container {max-width:1000px; width:100%;}
-    .subTitle3 > h2 {font-size: 1.5rem;}
-    .subTitle3 > h2::before {height: 1.5rem;}
-    .subTitle3 > h2::after {top:3.5rem;}
-}
-
-@media screen and (max-width: 800px) {
-    .subTitle3 {margin:10px;}
-    .subTitle3 > h2 {font-size: 1rem;}
-    .subTitle3 > h2::before {height: 1rem;}
-    .subTitle3 > h2::after {top:3rem;}
-}
-
-@media screen and (max-width:600px){
-    .subTitle3.history > .img-container {background: url("../img/history400px.png") no-repeat center / contain; max-width: 500px; height: 750px;} /* 연혁 */
-    .subTitle3.aboutUs > .img-container {background: url("../img/educenter_greetings_img_500px.png") no-repeat center / contain; max-width: 500px; height: 956px;} /* 회사소개 */
-    .subTitle3.history > .img-container > img,
-    .subTitle3.aboutUs > .img-container > img {display: none;}
-}

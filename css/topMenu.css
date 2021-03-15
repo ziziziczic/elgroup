@@ -12,7 +12,6 @@
 .top_menu_container > ul > li:last-child a {display: flex; justify-content: center; align-items: center;}
 .top_menu_container > ul > li:last-child a i {font-size: 1.5rem; display: flex; justify-content: center; align-items: center; border-radius: 50%; padding: 20px; background-color: #8fad04;}
 
-
     .menu_container {width:100%; height: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); align-items: center;}
     .menu_container > li {position:relative; width:100%; line-height: 100px;}
     .menu_container > li:hover {background:var(--orange); font-weight: bolder;}
@@ -22,37 +21,41 @@
     .menu_container ul li {line-height: 3rem;}
     .menu_container ul li:hover {width:100%; height:100%; background:var(--orange);}
 
+    .elgroupModal { position: fixed; z-index:9999; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+    .elgroupModal .modal_overlay {position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .6);}
+    .elgroupModal .modal_content {position: relative; width:60vw; height:40vh; padding: 10px; background-color: #fff; border-radius: 20px;}
+    .elgroupModal .modal_content > ul {display:flex; justify-content: space-evenly; align-items: center;}
+    .elgroupModal .modal_content > ul > li {position:relative; width:100%; line-height: 2rem;}
+    .elgroupModal .modal_content > ul > li > a { display: block; width:100%; color:white; font-weight: bolder; background-color:#8fad04;}
+    .elgroupModal .modal_content > ul > li > ul {position:absolute; width:100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; line-height: 2rem;}
+    .elgroupModal .modal_content > ul > li > ul > li > a {color:black;}
+    .elgroupModal .modal_content > button {position:absolute; right:20px; bottom:20px; font-size: 2rem; color:black;}
+
 /* MQ --------------------------------------------------------------------------*/
-@media screen and (max-width:1200px) {
-    /* .first .swiper-slide .text_link {top:20%;} */
-
-    .top_menu_container > ul {width:100vw; height: 80px; grid-template-columns: 15% 1fr}
-    .top_menu_container .menu_container {grid-template-columns: 1fr 1fr 1fr 1fr 10%;}
+@media screen and (max-width:1200px){
+    .top_menu_container {grid-template-columns: 1fr;}
+    .top_menu_container > ul {grid-column: 1/-1; grid-template-columns: 1fr 4fr 1fr;}
+    .elgroupModal .modal_content {width:60vw;}
 }
 
-/* @media screen and (max-width:1000px){
-    .first .swiper-slide .text_link {left:50%; width: 60%; height:30%; transform:translateX(-50%);}
-    .first .swiper-slide .text_link p {font-size: 1.1rem;}
-    .first .swiper-slide .text_link h1 {font-size: 2rem;}
-
-    .bottom_menu > ul {width:100vw;}
-
-} */
-
-@media screen and (max-width:800px){
-    .top_menu_container > ul {grid-template-columns: 30% 55% 15%;}
-    .top_menu_container > ul li:nth-child(2) ul {display:none;}
-    .top_menu_container > ul > li:last-child {display:block;}
+@media screen and (max-width:1000px){
+    .elgroupModal .modal_content {width:70vw;}
 }
 
-/* @media screen and (max-width:768px){
-    .first .swiper-slide .text_link p {font-size: 0.9rem;}
+@media screen and (max-width:768px){
+    .top_menu_container {height: 70px;}
+    .top_menu_container > ul {grid-column: 1/-1; grid-template-columns: 2fr 3fr 1fr;}
+    .top_menu_container > ul > li#logo > a > img { width:50%;}
+    .top_menu_container > ul > li:nth-child(2){display:none;}
+    .top_menu_container > ul > li:last-child{grid-column: 3/span 1;}
+    .top_menu_container > ul > li:last-child > a > i {font-size:1rem; padding: 15px}
 
-    .bottom_menu li a:hover:before {display: none;}
-    .bottom_menu li a {font-size: 1rem;}
-    .bottom_menu li a:hover {font-size: 1.1rem;}
+    .elgroupModal .modal_content {width:90vw;}
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:600px){
+    .top_menu_container > ul {grid-template-columns: 2fr 2fr 1fr;}
+    .top_menu_container > ul > li#logo > a > img { width:55%;}
 
-} */
+    .elgroupModal .modal_content {width:100vw;}
+}

@@ -19,13 +19,13 @@ header .top ul img {width:100%;}
 /* --------------------------------------------------------------------------------------------------------------------------------------------*/
 /* 상단메뉴 */
 header .container .menu {position:relative; width: 100%; height: 80px; background-color: rgb(13,38,76);}
-header .container .menu ul {z-index: 9999; display:flex; justify-content: space-evenly; line-height: 80px;}
+header .container .menu ul {z-index: 9999; display:grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); line-height: 80px;}
 header .container .menu ul li {position:relative; text-align: center;}
 header .container .menu ul li a {padding: 5px 20px; color:white;}
 
-header .container .menu ul ul {position:absolute; left: -30%; top: 80px; display:none; flex-direction: column; justify-content: space-evenly; line-height: 40px;}
+header .container .menu ul ul {position:absolute; left:0; top: 80px; width: 100%; display:none; border:1px solid white; flex-direction: column; justify-content: space-evenly; line-height: 40px;}
 header .container .menu ul ul li {font-size: 16px;}
-header .container .menu > ul > li:hover > ul {display: flex; width:170%;}
+header .container .menu > ul > li:hover > ul {display: flex;}
 
 header .container .menu ul ul ul {position: absolute; left: 80%; top:-3px; display:none; flex-direction: column; justify-content: space-evenly; background-color: rgb(13,38,76);;}
 header .container .menu ul ul > li:hover > ul {display: flex; width:100%;}

@@ -1,4 +1,6 @@
-// 메뉴 클릭시, 하단 메뉴 배경이 생긴다.
+// ---------------------------------------------------------------------------------------------
+// 메뉴 클릭시, 배경에 검정 화면 깔기
+// ---------------------------------------------------------------------------------------------
 const ul = document.querySelector(".menu > ul");
 const bg = document.querySelector(".menu .bg");
 
@@ -29,8 +31,9 @@ ul.addEventListener("mouseleave",()=>{ bg.classList.add("hide");});  // mouselea
 
 // -----------------------------------------------------------------------------------------------
 // swiper start 
+// -----------------------------------------------------------------------------------------------
 
-var swiper0 = new Swiper('.top_bg', {
+var swiper0 = new Swiper('.first', {
   spaceBetween: 0,
   centeredSlides: true,
   loop: true,
@@ -39,25 +42,6 @@ var swiper0 = new Swiper('.top_bg', {
       disableOnInteraction: false,
   },
 });
-
-
-// var swiper1 = new Swiper('.first', {
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     loop: true,
-//     autoplay: {
-//         delay: 3000,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// });
 
 var swiper2 = new Swiper('.second', {
     slidesPerView: 3,

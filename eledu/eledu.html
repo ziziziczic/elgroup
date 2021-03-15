@@ -9,10 +9,8 @@
 
     <!-- meta tag -->
     <meta name="title" content="이엘에듀 평생교육">
-    <meta name="keyword"
-        content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
-    <meta name="keywords"
-        content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
+    <meta name="keyword"content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
+    <meta name="keywords" content="온오프라인교육, 서비스교육, 세미나교육, 정부지원교육, 정부사업교육, K바우처, k바우처, k-voucher, 비대면서비스, 법정의무교육, 직무강화교육, 평생교육원">
     <meta name="description" content="이엘에듀는 온라인 평생교육원으로서 최고의 교육운영방법으로 교육진행을 제공해 드릴 것을 약속드립니다.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="이엘에듀">
@@ -25,28 +23,18 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/top_menu.css">
+    <link rel="stylesheet" href="./css/topMenu.css">
     <link rel="stylesheet" href="./css/eledu.css">
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-
-    <!-- swiper css (open source & 자체 제작용)-->
+    <!-- swiper -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/slideMoving.css">
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/12530f3a2e.js" crossorigin="anonymous"></script>
 
     <!-- swiper script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./js/slideMoving.js" defer></script>
     <script src="./js/eledu.js" defer></script>
 </head>
 
@@ -55,25 +43,38 @@
     <!-- 왼쪽 고정 메뉴 -->
     <div class="fixed_menu">
         <ul>
-            <li><a href="https://www.eledu.co.kr/cscenter/qna_write.php"><i
-                        class="fas fa-graduation-cap"></i><span>교육문의</span></a></li>
-            <li><a href="https://www.eledu.co.kr/eduask/estimate.php"><i
-                        class="fas fa-won-sign"></i><span>견적문의</span></a></li>
-            <li><a href="https://939.co.kr/eledu/"><i class="fas fa-tools"></i><span>원격지원</span></a></li>
+            <li>
+                <a href="https://www.eledu.co.kr/cscenter/qna_write.php">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>교육문의</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.eledu.co.kr/eduask/estimate.php">
+                    <i class="fas fa-won-sign"></i>
+                    <span>견적문의</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://939.co.kr/eledu/">
+                    <i class="fas fa-tools"></i>
+                    <span>원격지원</span>
+                </a>
+            </li>
             <li>
                 <!-- 로그인,로그아웃  -->
-                <? if(isset($_SESSION['LoginMemberID'])) { ?>
+                <!-- <? if(isset($_SESSION['LoginMemberID'])) { ?>
                     <li>
                         <a href="https://www.eledu.co.kr/member/logout.php">
                             <i class="fas fa-user"></i><span>로그아웃</span></a>
                     </li>
-                <?}else{?>
+                <?}else{?> -->
                     <li>
                         <a href="https://www.eledu.co.kr/member/login.php">
                             <i class="fas fa-user"></i><span>로그인</span>
                         </a>
                     </li>
-                <?}?>
+                <!-- <?}?> -->
             </li>
         </ul>
     </div>
@@ -138,9 +139,12 @@
                                 <li><a href="#">준비중</a></li>
                             </ul>
                         </li>
-                        <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">IT vendor</a>
+                        <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">IT</a>
                             <ul>
-                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">소개</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">History</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">기업교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">IT vendor 교육</a></li>
+                                <li><a href="https://www.eledu.co.kr/kv10/ITvendor.html">Partner</a></li>
                             </ul>
                         </li>
                         <li><a href="#">요양&middot;의료</a>
@@ -150,17 +154,17 @@
                             </ul>
                         </li>
                         <li>
-                            <? if(isset($_SESSION['LoginMemberID'])) { ?>
+                            <!-- <? if(isset($_SESSION['LoginMemberID'])) { ?>
                                 <li><a href="https://www.eledu.co.kr/mylecture/lecture_ing.php"><span style="font-weight: bolder; color:yellow"> 나의강의실</span></a></li>
                                 <li><a href="https://www.eledu.co.kr/member/logout.php"><span style="font-weight: bolder; color:yellow">로그아웃</span></a></li>
                                 
-                            <?}else{?>
+                            <?}else{?> -->
                                 <li>
                                     <a href="https://www.eledu.co.kr/member/login.php">
                                         <span style="font-weight: bolder; color:yellow">로그인</span>
                                     </a>
                                 </li>
-                            <?}?>
+                            <!-- <?}?> -->
                         </li>
                     </ul>
                     <div class="bg hide"></div>
@@ -169,48 +173,40 @@
         </div>
     </header>
 
-    <section id="slider1-container">
-            <!-- auto moving slides -->
-            <div id="slider1">
-                <div class="slide-container slideCenter">
+    <!-- 최상단 광고  -------------------------------------------------------------------------->
+    <section>
+        <div class="swiper-container first">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
                     <div class="tit_container">
                         <p>이엘에듀는 핵심만 콕!</p>
                         <h1>프로가 되기위한 <span>직무교육</span></h1>
-                        <a href="https://www.eledu.co.kr/worker/lecture.php?ParentCategory=57">
-                            <div class="link">바로가기</div>
-                        </a>
+                        <a href="#"><div class="link">바로가기</div></a>
                     </div>
                     <img src="./img/top_bg/1.jpg" alt="직무교육">
                 </div>
 
-                <div class="slide-container slideOut">
+                <div class="swiper-slide">
                     <div class="tit_container">
                         <p>이엘에듀와 함께하는</p>
                         <h1><span>법정의무교육</span></h1>
-                        <a href="https://www.eledu.co.kr/cpsinfo/cps.php">
-                            <div class="link">바로가기</div>
-                        </a>
+                        <a href="#"><div class="link">바로가기</div></a>
                     </div>
                     <img src="./img/top_bg/2.jpg" alt="법정의무교육">
                 </div>
 
-                <div class="slide-container slideOut">
+                <div class="swiper-slide">
                     <div class="tit_container">
                         <p>40만원에 400만원 바우처 받자!</p>
                         <h1>K 비대면 바우처</h1>
-                        <a href="https://www.eledu.co.kr/kv10/kvoucher.html">
-                            <div class="link">바로가기</div>
-                        </a>
+                        <a href="#"><div class="link">바로가기</div></a>
                     </div>
                     <img src="./img/top_bg/3.jpg" alt="직무교육">
                 </div>
             </div>
-            <!-- auto moving slides button -->
-            <div class="slider-btn1">
-                <div class="slider-button" data-cont="0">직무교육</div>
-                <div class="slider-button" data-cont="1">법정의무교육</div>
-                <div class="slider-button" data-cont="2">K 비대면 바우처</div>
-            </div>
+        </div>
     </section>
 
     <!-- 직무교육 -------------------------------------------------------------------------->
@@ -292,8 +288,7 @@
     </section>
 
     <!-- foot 영역 ---------------------------------------------------------------------------->
-    <iframe src="./footer.html" frameborder="0" width="100%" height="450" scrolling="no" marginwidth="0"
-        marginheight="0"></iframe>
+    <iframe src="./footer.html" frameborder="0" width="100%" height="450" scrolling="no" marginwidth="0" marginheight="0"></iframe>
 </body>
 
 </html>

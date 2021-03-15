@@ -176,8 +176,8 @@ body {width:100vw;
 }
 
 @media screen and (max-width:600px){
-    .subTitle3.history > .img-container {background: url("../img/history400px.png") no-repeat center / contain; max-width: 500px; height: 750px;} /* 연혁 */
-    .subTitle3.aboutUs > .img-container {background: url("../img/educenter_greetings_img_500px.png") no-repeat center / contain; max-width: 500px; height: 956px;} /* 회사소개 */
+    .subTitle3.history > .img-container {background: url("../img/history400px.png") no-repeat center / contain; max-width: 500px; height: 500px;} /* 연혁 */
+    .subTitle3.aboutUs > .img-container {background: url("../img/educenter_greetings_img_500px.png") no-repeat center / contain; max-width: 500px; height: 600px;} /* 회사소개 */
     .subTitle3.history > .img-container > img,
     .subTitle3.aboutUs > .img-container > img {display: none;}
 }
